@@ -14,14 +14,19 @@ bin/build.sh
 ##### Deploy
 ```
 bin/deploy.sh
+
+```
+##### Request
+```
+curl -s localhost:8080/app
 ```
 
+### Note
 ##### Build and Deploy 
 ```
 bin/bd.sh
 ```
 
-### Note 
 ##### Peek inside the container
 open shell on the last created container.
 
