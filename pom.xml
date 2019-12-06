@@ -3,7 +3,7 @@
 	<groupId>com.djd.fun</groupId>
 	<artifactId>koalapp</artifactId>
 	<packaging>war</packaging>
-	<version>1.4</version>
+	<version>1.5-SNAPSHOT</version>
 	<name>koalapp Maven Webapp</name>
 	<dependencies>
 		<dependency>
@@ -75,7 +75,7 @@
 	<scm>
 		<connection>scm:git:git@github.com:do-i/koalapp.git</connection>
 		<developerConnection>scm:git:git@github.com:do-i/koalapp.git</developerConnection>
-		<tag>v1.4</tag>
+		<tag>HEAD</tag>
 	</scm>
 	<distributionManagement>
 		<repository>
