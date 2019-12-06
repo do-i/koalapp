@@ -1,6 +1,6 @@
-### Sample app with Tomcat 8.5 on Docker 
+### Sample app with Tomcat 8.5 on Docker
 
-##### Start 
+##### Start
 Starts tomcat 8.5 container
 ```sh
 bin/start.sh
@@ -22,7 +22,7 @@ curl -s localhost:8080/app
 ```
 
 ### Note
-##### Build and Deploy 
+##### Build and Deploy
 ```
 bin/bd.sh
 ```
@@ -35,3 +35,15 @@ docker exec -it $(docker container ls -qn 1) bash
 ```
 * `-i` is interactive
 * `-t` is for tty
+
+### Nexus on Docker
+
+    mkdir /tmp/docker/nexus-data
+    docker run -d -p 8081:8081 --name nexus -v /tmp/docker/nexus-data:/nexus-data sonatype/nexus3
+
+### Release
+
+    mvn release:prepare
+
+    mvn release:perform \
+      -Darguments="-Dmaven.javadoc.skip=true -DaltReleaseDeploymentRepository=releases::default::http://localhost:8081/nexus/content/repositories/releases"

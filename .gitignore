@@ -9,4 +9,6 @@ gradle-app.setting
 volumes/
 
 
+pom.xml.releaseBackup
+release.properties
 
