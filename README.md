@@ -43,7 +43,8 @@ docker exec -it $(docker container ls -qn 1) bash
 
 ### Release
 
+    mvn clean install release:clean
+
     mvn release:prepare
 
-    mvn release:perform \
-      -Darguments="-Dmaven.javadoc.skip=true -DaltReleaseDeploymentRepository=releases::default::http://localhost:8081/nexus/content/repositories/releases"
+    mvn release:perform -Darguments="-Dmaven.javadoc.skip=true"
